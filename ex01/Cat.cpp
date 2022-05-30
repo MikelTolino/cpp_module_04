@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:34:08 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/27 18:49:20 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 00:02:42 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ Cat::Cat(void)
 
 Cat::~Cat()
 {
+	delete this->brain;
 	std::cout << "Default Cat destructor called\n";
 }
 
@@ -35,8 +36,9 @@ Cat::Cat(Cat const &other)
 	std::cout << "Copy constructor called\n";
 }
 
-Cat &Cat::operator=(Cat const &other)
+Cat & Cat::operator=(Cat const &other)
 {
+	std::cout << "Asignation Cat constructor called\n";
 	this->type = other.type;
 	return (*this);
 }
@@ -44,4 +46,9 @@ Cat &Cat::operator=(Cat const &other)
 void Cat::makeSound( void ) const
 {
 	std::cout << "Miiiiauuhh!!!!\n";
+}
+
+void Cat::setBrain(Brain *brain)
+{
+	this->brain = brain;
 }
