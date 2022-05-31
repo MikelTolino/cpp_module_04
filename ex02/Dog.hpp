@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:33:01 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/30 13:18:19 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:25:50 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 
 class Dog : public Animal
 {
-
 private:
 	Brain *brain;
 
@@ -28,7 +27,8 @@ public:
 	Dog & operator=(Dog const &);
 	~Dog( void );
 	void makeSound( void ) const;
-	void setBrain(Brain const & brain);
+	void setBrain(Brain *brain);
+	Brain* getBrain( void) const;
 };
 
 #endif

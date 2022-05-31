@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:27:09 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/27 18:49:52 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:24:37 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,3 @@ void Animal::setType(std::string type)
 	this->type = type;
 }
 
-void Animal::makeSound(void) const
-{
-	std::cout << "An animal makes some sound!\n";
-}

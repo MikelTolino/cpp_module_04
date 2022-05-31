@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:22:50 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/30 13:20:16 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:24:18 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
 	Animal & operator=(Animal const &);
 	std::string getType( void ) const;
 	void setType( std::string );
-	~Animal( void );
+	virtual ~Animal( void );
 	virtual void makeSound( void ) const = 0;
 };
 
