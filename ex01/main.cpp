@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/31 00:22:24 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:19:37 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,9 @@ int main()
 {
 	const Animal *c = new Cat();
 	const Animal *d = new Dog();
-	const Animal *animals[NUM];
+	Animal *animals[NUM];
 
-	std::cout << "---------------------------------------\n"
-			  << "Ideas:\n\n";
+	std::cout << "---------------- BRAIN IDEAS -----------------------\n\n";
 
 	Brain *b = new Brain();
 
@@ -31,8 +30,7 @@ int main()
 	b->newIdea("I love my mum!!!");
 	b->showIdeas();
 
-	std::cout << "---------------------------------------\n"
-			  << "Array of animals\n\n";
+	std::cout << "------------- ARRAY OF ANIMALS --------------------------\n\n";
 
 	for (size_t i = 0; i < NUM; i++)
 	{
@@ -41,45 +39,42 @@ int main()
 		else
 			animals[i] = new Cat();
 	}
-	for (size_t i = 0; i < NUM; i++)
-		delete animals[i];
+	for (size_t j = 0; j < NUM; j++)
+	 	delete animals[j];
 	delete c;
 	delete d; // should not create a leak
-	delete b;
 
-	std::cout << "------------------------------------------\n";
+  	std::cout << "----------------- DOG -------------------------1\n";
 
-	Dog *dog1 = new Dog;
+	Dog *dog1 = new Dog();
+	dog1->setBrain(b);
 	Dog *dog2 = new Dog(*dog1);
+	dog1->getBrain()->showIdeas();
+	dog2->getBrain()->showIdeas();
 
-	delete dog1;
-	delete dog2;
+ 	std::cout << "---------------- CAT --------------------------\n";
 
-	std::cout << "------------------------------------------\n";
-
-	Cat *Cat1 = new Cat;
+	Cat *Cat1 = new Cat();
+	Cat1->setBrain(b);
 	Cat *Cat2 = new Cat(*Cat1);
+	Cat1->getBrain()->showIdeas();
+	Cat2->getBrain()->showIdeas();
 
-	delete Cat1;
-	delete Cat2;
+/*  	std::cout << "------------------------------------------\n";
 
- 	std::cout << "------------------------------------------\n";
+	Dog *DogA = new Dog();
+	Dog *DogB = new Dog();
 
-	Dog *DogA = new Dog;
-	Dog *DogB = new Dog;
-
-	*DogA = *DogB;
+	DogA = DogB;
 	delete DogA;
-	delete DogB;
 
-	std::cout << "------------------------------------------\n";
+	std::cout << "------------------------------------------4\n";
 
-	Cat *catA = new Cat;
-	Cat *catB = new Cat;
+	Cat *catA = new Cat();
+	Cat *catB = new Cat();
 
-	*catA = *catB;
-	delete catA;
-	delete catB;
-	system("leaks poli");
+	catA = catB;
+	delete catA; */
+	system("leaks brain");
 	return 0;
 }

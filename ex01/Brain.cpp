@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 11:16:09 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/30 23:40:22 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 12:34:20 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ Brain::~Brain()
 Brain::Brain(Brain const &other)
 {
 	*this = other;
-	return;
 }
 
 Brain & Brain::operator=(Brain const &other)
 {
+	this->ideasNow->clear();
 	for (size_t i = 0; i < other.counter; i++)
 		this->ideasNow[i] = other.ideasNow[i];
 	this->counter = other.counter;

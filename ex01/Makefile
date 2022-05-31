@@ -6,7 +6,7 @@
 #    By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/03 17:48:32 by mmateo-t          #+#    #+#              #
-#    Updated: 2022/05/30 19:14:34 by mmateo-t         ###   ########.fr        #
+#    Updated: 2022/05/31 13:18:03 by mmateo-t         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,14 @@ CFLAGS:= -Wall -Werror -Wextra
 CPPSTD:= -std=c++98
 SRCS:= $(wildcard *.cpp)
 OBJS:= $(SRCS:%.cpp=%.o)
-NAME:= poli
+NAME:= brain
 RM:= rm -rf
 DEBUG:= -g
 
 all:$(NAME)
 
 $(NAME):$(OBJS)
-	$(CXX) $(DEBUG) $(CFLAGS) $(SHADOW) $(CPPSTD) $(OBJS) -o $@
+	$(CXX) $(DEBUG) $(CFLAGS) $(CPPSTD) $(OBJS) -o $@
 
 %.o: %.c
 	$(CXX) $(CFLAGS) $(CPPSTD) -c $(SRCS) -o $@
