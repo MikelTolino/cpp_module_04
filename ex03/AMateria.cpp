@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 15:55:04 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/31 16:07:36 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 19:06:50 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,9 @@ AMateria::~AMateria()
 std::string const &AMateria::getType() const
 {
 	return this->type;
+}
+
+void AMateria::use(ICharacter &target)
+{
+	std::cout << target.getName() << "Character using Materia\n";
 }

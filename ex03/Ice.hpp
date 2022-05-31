@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 15:35:03 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/31 16:11:29 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 19:08:16 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 
 class Ice : public AMateria
 {
+	
+public:
 	Ice();
 	~Ice();
-	Ice & Ice::operator=(Ice const &other);
+	Ice &operator=(Ice const &other);
 	Ice(Ice const &other);
 	Ice *clone() const;
 	void use(ICharacter &target);
