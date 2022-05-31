@@ -6,7 +6,7 @@
 /*   By: mmateo-t <mmateo-t@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 18:21:55 by mmateo-t          #+#    #+#             */
-/*   Updated: 2022/05/31 13:19:37 by mmateo-t         ###   ########.fr       */
+/*   Updated: 2022/05/31 13:22:48 by mmateo-t         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main()
 	delete c;
 	delete d; // should not create a leak
 
-  	std::cout << "----------------- DOG -------------------------1\n";
+  	std::cout << "----------------- DOG -------------------------\n";
 
 	Dog *dog1 = new Dog();
 	dog1->setBrain(b);
@@ -60,21 +60,6 @@ int main()
 	Cat1->getBrain()->showIdeas();
 	Cat2->getBrain()->showIdeas();
 
-/*  	std::cout << "------------------------------------------\n";
-
-	Dog *DogA = new Dog();
-	Dog *DogB = new Dog();
-
-	DogA = DogB;
-	delete DogA;
-
-	std::cout << "------------------------------------------4\n";
-
-	Cat *catA = new Cat();
-	Cat *catB = new Cat();
-
-	catA = catB;
-	delete catA; */
-	system("leaks brain");
+ 	std::cout << "-----------------------------------------------\n";
 	return 0;
 }
